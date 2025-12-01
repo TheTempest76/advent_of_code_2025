@@ -1,11 +1,15 @@
 # making a circular queeue to store numbers from 1 to 99 and move the pointer to the starting if it hits 99 and count the number of times it hits 0
+
+
+#ok im an idiot if it says L before the number it means turn left and if it says R it means turn right but we dont care about that for this problem so we will just ignore it
 def import_directions(file_path):
     with open(file_path, 'r') as file:
         directions = [int(line.strip().replace("L", "").replace("R", "")) for line in file.readlines()]
     return directions
 
+
 def count_circular_queue_hits(directions):
-    queue = list(range(100))
+    queue = list(range(0, 100))
     pointer = 0
     hit_count = 0
 
